@@ -62,8 +62,8 @@ export const CreatePostModal = () => {
                     const file = postData?.postImageUrl;
                     const formData = new FormData();
                     formData.append("file", file);
-                    formData.append("upload_preset", "alcon-social");
-                    formData.append("folder", "alcon");
+                    formData.append("upload_preset", "connect-social");
+                    formData.append("folder", "connect");
 
                     try {
                         const res = await fetch(cloudinaryUrl, {

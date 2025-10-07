@@ -3,8 +3,8 @@ import { signInHandler, signUpHandler } from "./helpers";
 import { toast } from 'react-toastify';
 
 const initialState = {
-    token: localStorage.getItem("Alcon_token")?.token || "",
-    userData: JSON.parse(localStorage.getItem("Alcon_user"))?.userData || {},
+    token: localStorage.getItem("Connect_token")?.token || "",
+    userData: JSON.parse(localStorage.getItem("Connect_user"))?.userData || {},
     isLoading: false,
 }
 
@@ -13,7 +13,7 @@ export const authSlice = createSlice({
     initialState,
     reducers: {
         signOutHandler: (state) => {
-            localStorage.removeItem("Alcon_User");
+            localStorage.removeItem("Connect_User");
             state.token = "";
             state.userData = {};
         },

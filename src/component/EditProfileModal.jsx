@@ -26,8 +26,8 @@ export const EditProfileModal = ({ currentUser, showUpdateProfile, setShowUpdate
             const file = fileUrl;
             const formData = new FormData();
             formData.append("file", file);
-            formData.append("upload_preset", "alcon-social");
-            formData.append("folder", "alcon");
+            formData.append("upload_preset", "connect-social");
+            formData.append("folder", "connect");
 
             try {
                 const res = await fetch(cloudinaryUrl, {

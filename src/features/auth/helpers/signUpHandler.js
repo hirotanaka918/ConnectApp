@@ -13,8 +13,8 @@ export const signUpHandler = createAsyncThunk(
             });
 
             if (status === 201) {
-                localStorage.setItem("Alcon_User", JSON.stringify({ token: data.encodedToken, userData: data.createdUser }));
-                toast("Welcome to ALCON!", { position: toast.POSITION.TOP_CENTER, autoClose: 1000 });
+                localStorage.setItem("Connect_User", JSON.stringify({ token: data.encodedToken, userData: data.createdUser }));
+                toast("Welcome to Connect!", { position: toast.POSITION.TOP_CENTER, autoClose: 1000 });
                 return data;
             }
         } catch (err) {

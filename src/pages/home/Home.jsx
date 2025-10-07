@@ -83,8 +83,8 @@ export const Home = () => {
             const file = postImageUrl;
             const formData = new FormData();
             formData.append("file", file);
-            formData.append("upload_preset", "alcon-social");
-            formData.append("folder", "alcon");
+            formData.append("upload_preset", "connect-social");
+            formData.append("folder", "connect");
 
             try {
                 const res = await fetch(cloudinaryUrl, {
@@ -124,7 +124,7 @@ export const Home = () => {
                         </header>
 
                         <header className="text-xl font-bold flex py-4 text-blue-600 sm:hidden">
-                            <Link to="/home" id="hero-logo"> ALCON </Link>
+                            <Link to="/home" id="hero-logo"> Connect </Link>
                         </header>
 
                         {/* create post */}

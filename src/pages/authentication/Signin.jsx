@@ -48,7 +48,7 @@ export const Signin = () => {
                 <Loader show={isLoading} type="body" />
             </div>
 
-            <h1 className="mt-16 text-4xl font-bold text-blue-600 hidden lg:block tracking-wider">ALCON</h1>
+            <h1 className="mt-16 text-4xl font-bold text-blue-600 hidden lg:block tracking-wider">Connect</h1>
 
             <div className="mx-auto w-full ">
                 <div className="md:container md:mx-auto mx-auto flex">
@@ -57,7 +57,7 @@ export const Signin = () => {
 
                     <div className="mx-auto mt-14 sm:mx-28 sm:mt-16">
                         <header className="text-2xl font-bold text-center py-2 mb-2 text-blue-600 sm:hidden">
-                            <Link to="/home"> ALCON </Link>
+                            <Link to="/home"> Connect </Link>
                         </header>
                         <div className="flex flex-col mx-auto pb-8 shadow-none min-w-max bg-slate-100 rounded-lg">
                             <form className="mx-8 flex flex-col">
@@ -107,7 +107,7 @@ export const Signin = () => {
                                     Guest Login
                                 </Link>
 
-                                <p className="my-2 text-center text-sm text-slate-800 self-center font-medium"> New to Alcon?
+                                <p className="my-2 text-center text-sm text-slate-800 self-center font-medium"> New to Connect?
                                     <Link className="text-blue-700" to="/signup"> Sign Up </Link>
                                 </p>
 

@@ -1,9 +1,9 @@
 <h1 align="center">
-  ALCON - Always Connected
+  Connect - Always Connected
 <img height="50" src="https://user-images.githubusercontent.com/36642146/179075013-f138e810-0ac4-415a-915c-23d56be1448e.png">
 </h1>
 <h3 align="center">
-ALCON is a Social Media App to connect with people. <br/>
+Connect is a Social Media App to connect with people. <br/>
 </h3>
 
 <table>

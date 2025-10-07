@@ -61,7 +61,7 @@ export const SinglePost = () => {
                         </header>
 
                         <header className="text-xl font-bold flex py-4 text-blue-600 sm:hidden">
-                            <Link to="/home"> ALCON </Link>
+                            <Link to="/home"> Connect </Link>
                         </header>
 
                         <div className="flex flex-col border ml-0 sm:mr-0 sm:mx-3 pl-2 pr-1 sm:pr-0 sm:px-5 py-3">

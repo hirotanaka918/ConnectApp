@@ -35,7 +35,7 @@ export const Explore = () => {
                         </header>
 
                         <header className="text-xl font-bold flex py-4 text-blue-600 sm:hidden">
-                            <Link to="/home" id="hero-logo"> ALCON </Link>
+                            <Link to="/home" id="hero-logo"> Connect </Link>
                         </header>
 
                         {isLoading ? (

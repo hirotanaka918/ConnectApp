@@ -53,7 +53,7 @@ export const Profile = () => {
                         </header>
 
                         <header className="text-xl font-bold flex py-4 text-blue-600 sm:hidden justify-between">
-                            <Link to="/home" id="hero-logo"> ALCON </Link>
+                            <Link to="/home" id="hero-logo"> Connect </Link>
                             <FiLogOut className="w-5 h-5 text-blue-700 cursor-pointer" onClick={() => dispatch(signOutHandler())} />
                         </header>
 

@@ -53,7 +53,7 @@ export const Signup = () => {
     return (
         <div className="flex flex-col mt-4">
             <header className="place-self-center text-xl font-bold flex py-4 text-blue-600">
-                ALCON
+                Connect
             </header>
 
             <div className="flex flex-col pb-1 shadow-none bg-slate-100 rounded-lg w-1/4 mx-auto min-w-max">

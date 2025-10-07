@@ -11,7 +11,7 @@ export const signInHandler = createAsyncThunk(
             const { status, data } = await axios.post("/api/auth/login", { username, password });
 
             if (status === 200) {
-                localStorage.setItem("Alcon_User", JSON.stringify({ token: data.encodedToken, userData: data.foundUser }));
+                localStorage.setItem("Connect_User", JSON.stringify({ token: data.encodedToken, userData: data.foundUser }));
                 toast("Welcome Back!", { position: toast.POSITION.TOP_CENTER, autoClose: 1000 });
             }
             return data;
