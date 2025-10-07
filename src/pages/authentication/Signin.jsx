@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { signInHandler } from "../../features/auth/helpers";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Loader from 'react-spinner-loader';
 import { toast } from "react-toastify";
 
@@ -23,6 +23,16 @@ export const Signin = () => {
     } = useSelector(state => state);
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (isLoading) return;
+        // Navigate to home on successful login
+        const persistedAuth = JSON.parse(localStorage.getItem("Connect_User") || "null");
+        if (persistedAuth?.token) {
+            navigate("/home", { replace: true });
+        }
+    }, [isLoading, navigate]);
 
     const formSignInHandler = (e) => {
         e.preventDefault();
@@ -94,18 +104,17 @@ export const Signin = () => {
 
                                 </label>
 
-                                <Link
-                                    to="/home"
+                                <button
                                     className="my-3 text-x cursor-pointer text-center py-1 border-2 font-semibold  bg-blue-600 hover:bg-blue-700 text-white"
                                     onClick={(e) => formSignInHandler(e)} >
                                     Login
-                                </Link>
+                                </button>
 
-                                <Link
-                                    to="/home" className="my-3 text-x cursor-pointer text-center py-1 border-2 font-semibold  text-blue-700 hover:bg-slate-200"
+                                <button
+                                    className="my-3 text-x cursor-pointer text-center py-1 border-2 font-semibold  text-blue-700 hover:bg-slate-200"
                                     onClick={(e) => formGuestSignInHandler(e)} >
                                     Guest Login
-                                </Link>
+                                </button>
 
                                 <p className="my-2 text-center text-sm text-slate-800 self-center font-medium"> New to Connect?
                                     <Link className="text-blue-700" to="/signup"> Sign Up </Link>

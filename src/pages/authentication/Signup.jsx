@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { signUpHandler } from "../../features/auth/helpers";
 import Loader from 'react-spinner-loader';
@@ -24,10 +24,19 @@ export const Signup = () => {
     } = useSelector(state => state);
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const [formInputs, setFormInputs] = useState(signUpInputs);
 
     const { firstName, lastName, username, password, confirmPassword } = formInputs;
+
+    useEffect(() => {
+        if (isLoading) return;
+        const persistedAuth = JSON.parse(localStorage.getItem("Connect_User") || "null");
+        if (persistedAuth?.token) {
+            navigate("/home", { replace: true });
+        }
+    }, [isLoading, navigate]);
 
     const formSignUpHandler = (e) => {
         e.preventDefault();

@@ -2,9 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 import { signInHandler, signUpHandler } from "./helpers";
 import { toast } from 'react-toastify';
 
+const persistedAuth = JSON.parse(localStorage.getItem("Connect_User") || "null");
 const initialState = {
-    token: localStorage.getItem("Connect_token")?.token || "",
-    userData: JSON.parse(localStorage.getItem("Connect_user"))?.userData || {},
+    token: persistedAuth?.token || "",
+    userData: persistedAuth?.userData || {},
     isLoading: false,
 }
 
